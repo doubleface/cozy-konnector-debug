@@ -11,5 +11,5 @@ module.exports = baseKonnector.createNew({
 })
 
 function generateError (requiredFields, items, data, next) {
-  next('this is an error message')
+  next('UNKNOWN_ERROR')
 }
