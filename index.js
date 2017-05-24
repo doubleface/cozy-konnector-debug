@@ -63146,7 +63146,7 @@ module.exports = baseKonnector.createNew({
 })
 
 function generateError (requiredFields, items, data, next) {
-  next('UNKNOWN_ERROR')
+  next('LOGIN_FAILED')
 }
 
 
