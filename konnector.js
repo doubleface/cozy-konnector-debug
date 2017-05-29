@@ -11,8 +11,8 @@ module.exports = baseKonnector.createNew({
 })
 
 function generateError (requiredFields, items, data, next) {
-  if (requiredFields.login === 'OK') {
+  if (requiredFields.code === 'OK') {
     return next()
   }
-  next(requiredFields.login)
+  next(requiredFields.code)
 }
