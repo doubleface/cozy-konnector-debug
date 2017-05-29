@@ -11,5 +11,8 @@ module.exports = baseKonnector.createNew({
 })
 
 function generateError (requiredFields, items, data, next) {
-  next('LOGIN_FAILED')
+  if (requiredFields.login === 'OK') {
+    return next()
+  }
+  next(requiredFields.login)
 }
