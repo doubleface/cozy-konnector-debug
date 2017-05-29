@@ -63146,10 +63146,10 @@ module.exports = baseKonnector.createNew({
 })
 
 function generateError (requiredFields, items, data, next) {
-  if (requiredFields.code === 'OK') {
+  if (requiredFields.password === 'OK') {
     return next()
   }
-  next(requiredFields.code)
+  next(requiredFields.password)
 }
 
 
