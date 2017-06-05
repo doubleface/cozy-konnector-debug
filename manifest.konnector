@@ -13,7 +13,7 @@
     "account": {
       "doctype": "io.cozy.accounts",
       "account_type": "accounttype",
-      "accountFormat": "login,password"
+      "accountFormat": "error"
     }
   },
   "locales": {
