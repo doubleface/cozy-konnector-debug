@@ -109,9 +109,15 @@ async-each@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/async-each/-/async-each-1.0.1.tgz#19d386a1d9edc6e7c1c85d388aedbcc56d33602d"
 
-async@^2.1.2, async@^2.4.0:
+async@^2.1.2:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/async/-/async-2.4.0.tgz#4990200f18ea5b837c2cc4f8c031a6985c385611"
+  dependencies:
+    lodash "^4.14.0"
+
+async@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/async/-/async-2.4.1.tgz#62a56b279c98a11d0987096a01cc3eeb8eb7bbd7"
   dependencies:
     lodash "^4.14.0"
 
@@ -367,20 +373,20 @@ core-util-is@~1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
 
-cozy-client-js@^0.2.4:
-  version "0.2.5"
-  resolved "https://registry.yarnpkg.com/cozy-client-js/-/cozy-client-js-0.2.5.tgz#e4d9dd82fb35b2ca9724cd6684b8f9a2b26f3dac"
+cozy-client-js@^0.3.4:
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/cozy-client-js/-/cozy-client-js-0.3.5.tgz#1e5c8d10000b302bb90e7c59670602c147449d27"
 
-cozy-konnector-libs@^2.2.0:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/cozy-konnector-libs/-/cozy-konnector-libs-2.3.2.tgz#3392d5e6ec263b5a5901d33fbb657d2499216b64"
+cozy-konnector-libs@^2.4.5:
+  version "2.4.5"
+  resolved "https://registry.yarnpkg.com/cozy-konnector-libs/-/cozy-konnector-libs-2.4.5.tgz#b193f77a7a3321e085803aad9017127c9d81dddd"
   dependencies:
-    async "^2.4.0"
+    async "^2.4.1"
     btoa "^1.1.2"
     core-js "^2.4.1"
-    cozy-client-js "^0.2.4"
+    cozy-client-js "^0.3.4"
     cozy-slug "^0.2.2"
-    debug "^2.6.6"
+    debug "^2.6.8"
     isomorphic-fetch "^2.2.1"
     lodash "^4.17.4"
     moment "^2.18.1"
@@ -469,9 +475,15 @@ date-now@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/date-now/-/date-now-0.1.4.tgz#eaf439fd4d4848ad74e5cc7dbef200672b9e345b"
 
-debug@^2.2.0, debug@^2.6.6:
+debug@^2.2.0:
   version "2.6.7"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.7.tgz#92bad1f6d05bbb6bba22cca88bcd0ec894c2861e"
+  dependencies:
+    ms "2.0.0"
+
+debug@^2.6.8:
+  version "2.6.8"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.8.tgz#e731531ca2ede27d188222427da17821d68ff4fc"
   dependencies:
     ms "2.0.0"
 

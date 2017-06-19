@@ -1,5 +1,8 @@
 const konnector = require('./konnector')
 const {log} = require('cozy-konnector-libs')
+const debug = require('debug')
+
+debug.log = console.log.bind(console)
 
 const cozyFields = JSON.parse(process.env.COZY_FIELDS)
 
