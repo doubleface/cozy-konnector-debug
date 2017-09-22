@@ -1,15 +1,21 @@
-const konnector = require('./konnector')
-const {log} = require('cozy-konnector-libs')
-const debug = require('debug')
+'use strict'
 
-debug.log = console.log.bind(console)
+const {BaseKonnector, log} = require('cozy-konnector-libs')
 
-const cozyFields = JSON.parse(process.env.COZY_FIELDS)
-
-konnector.fetch({account: cozyFields.account, folderPath: cozyFields.folder_to_save}, err => {
-  log('debug', 'The konnector has been run')
-  if (err) {
-    log('error', err)
-    process.exit(1)
+module.exports = new BaseKonnector(fields => {
+  const timeout = Number(fields.timeout)
+  if (timeout > 0) {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        generateError(fields.error)
+        resolve()
+      }, timeout)
+    })
   }
+
+  generateError(fields.error)
 })
+
+function generateError (error) {
+  if (error !== 'OK') log('error', error)
+}
